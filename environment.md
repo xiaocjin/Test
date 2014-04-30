@@ -142,3 +142,39 @@
       "karma-coverage": "^0.2.1",
       "karma-chrome-launcher": "^0.1.3"
     }
+
+##jasmine html
+
+    <html>
+    <head>
+      <title>Jasmine Spec Example</title>
+    
+      <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.3.1/jasmine_favicon.png">
+      <link rel="stylesheet" type="text/css" href="lib/jasmine-1.3.1/jasmine.css">
+      <script type="text/javascript" src="lib/jasmine-1.3.1/jasmine.js"></script>
+      <script type="text/javascript" src="lib/jasmine-1.3.1/jasmine-html.js"></script>
+    
+      <script type="text/javascript">
+        ......
+      </script>
+    
+      <script type="text/javascript">
+        	
+    	var jasmineEnv = jasmine.getEnv();
+        var htmlReporter = new jasmine.HtmlReporter();
+    		
+        jasmineEnv.addReporter(htmlReporter);
+    	  
+    	jasmineEnv.specFilter = function(spec) {
+    		return htmlReporter.specFilter(spec);
+        };	  
+    	
+    	window.onload = function() {
+    		jasmineEnv.execute();
+        };
+      </script>
+    </head>
+    
+    <body>
+    </body>
+    </html>
