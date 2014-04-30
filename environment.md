@@ -1,6 +1,10 @@
 #测试环境配置
 
-##Gruntfile
+##安装全局环境
+
+    npm install -g karma
+
+##配置Gruntfile
 
     module.exports = function(grunt) {
     
@@ -47,7 +51,7 @@
       grunt.registerTask('default', ['uglify','markdown','karma']);
     };
 
-##karma.conf
+##配置karma.conf
 
     // Karma configuration
     // Generated on Fri Apr 25 2014 10:54:16 GMT+0800 (中国标准时间)
@@ -124,7 +128,7 @@
     };
 
 
-##package.json
+##在package.json添加引用模块
 
     "devDependencies": {
       "grunt": "^0.4.4",
